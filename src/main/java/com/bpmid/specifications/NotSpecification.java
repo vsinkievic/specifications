@@ -12,11 +12,10 @@ public class NotSpecification extends AbstractSpecification {
 	public boolean isSatisfiedBy(Object candidate) {
 		failReason = null;
 		
-		if (wrapped.isSatisfiedBy(candidate)) {
-			failReason = "NotSpecification cannot describe failReason";
-			return false;
-		}
-			return true;
+		if (wrapped.isSatisfiedBy(candidate)) 
+			return falseWithReason("NotSpecification cannot describe failReason");
+		
+		return true;
 	}
 
 }

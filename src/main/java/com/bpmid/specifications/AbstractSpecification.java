@@ -9,6 +9,11 @@ public abstract class AbstractSpecification implements Specification {
 		return failReason;
 	}
 
+	protected boolean falseWithReason(String reason) {
+		this.failReason = reason;
+		return false;
+	}
+	
 	@Override
 	public Specification and(Specification other) {
 		

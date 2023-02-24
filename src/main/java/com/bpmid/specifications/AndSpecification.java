@@ -15,11 +15,9 @@ public class AndSpecification extends AbstractSpecification {
 		failReason = null;
 		
 		if (! left.isSatisfiedBy(candidate)) {
-			this.failReason = left.getFailReason();
-			return false;
+			return falseWithReason(left.getFailReason());
 		} else if (! right.isSatisfiedBy(candidate)) {
-			this.failReason = right.getFailReason();
-			return false;
+			return falseWithReason(right.getFailReason());
 		}
 		return true;
 	}

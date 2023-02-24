@@ -18,10 +18,8 @@ public class OrSpecification extends AbstractSpecification {
 		} else {
 			if (right.isSatisfiedBy(candidate))
 				return true;
-			else {
-				this.failReason = right.getFailReason();
-				return false;
-			}
+			else 
+				return falseWithReason( right.getFailReason());
 		}
 	}
 
