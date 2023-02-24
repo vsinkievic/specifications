@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bpmid</groupId>
+  <artifactId>specifications</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>specifications</name>
+  <description>Main classes to build classes to use Specification pattern</description>
+  
+    <scm>
+        <developerConnection>scm:git:git@github.com:vsinkievic/specifications.git</developerConnection>
+        <tag>specifications-0.0.1-SNAPSHOT</tag>
+        <url>scm:git:git@github.com:vsinkievic/specifications.git</url>
+    </scm>
+        <!-- Allow suppression with comments
+       // CHECKSTYLE:OFF
+       -->
+    <distributionManagement>
+        <repository>
+            <id>mbuilder.sinkievic.lt</id>
+            <name>mbuilder.sinkievic.lt-releases</name>
+            <url>http://192.168.11.5:8081/artifactory/BPMID-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>mbuilder.sinkievic.lt</id>
+            <name>mbuilder.sinkievic.lt-snapshots</name>
+            <url>http://192.168.11.5:8081/artifactory/BPMID-dev</url>
+        </snapshotRepository>
+    </distributionManagement>
+        <!-- Allow suppression with comments
+       // CHECKSTYLE:ON
+       -->
+    <properties>
+        <!-- Build properties -->
+        <maven.version>3.6.3</maven.version>
+        <java.version>11</java.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+    </properties>
+  
+    <dependencies>
+    	<dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter-engine</artifactId>
+	        <version>5.9.1</version>
+	        <scope>test</scope>
+	    </dependency>
+    </dependencies>
+</project>
